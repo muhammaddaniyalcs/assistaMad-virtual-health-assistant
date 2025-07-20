@@ -30,7 +30,6 @@ AssistaMad is a smart health assistant and reminder system that helps users moni
 
 
 ## Setup Instructions
-## ⚙️ Setup Instructions
 
 1. **Clone the Repository**
    ```bash
@@ -38,25 +37,25 @@ AssistaMad is a smart health assistant and reminder system that helps users moni
 
 2. **Web App**
 
-Move web/ to htdocs/ (XAMPP).
+- Move web/ to htdocs/ (XAMPP).
 
-Import assitamad.sql in phpMyAdmin.
+- Import assitamad.sql in phpMyAdmin.
 
-Access via http://localhost/web/.
+- Access via http://localhost/web/.
 
 3. **Android App**
 
-Open android/ in Android Studio.
+- Open android/ in Android Studio.
 
-Run on device/emulator.
+- Run on device/emulator.
 
-Update API URLs if required.
+- Update API URLs if required.
 
 4. **Arduino**
 
-Open .ino file from arduino/ folder in Arduino IDE.
+- Open .ino file from arduino/ folder in Arduino IDE.
 
-Connect sensors and upload to board.
+- Connect sensors and upload to board.
 
 
 
@@ -66,4 +65,9 @@ Connect sensors and upload to board.
 - Zeeshan Ahmed
 
 ## License
-[MIT](LICENSE) *(or your preferred license)*
+
+This project is licensed for **educational and non-commercial use only**.  
+You are free to explore, learn from, and adapt the code for personal or academic purposes.  
+**Commercial use, redistribution, or resale is not permitted without permission.**
+
+© 2025 Muhammad Daniyal – All Rights Reserved.
