@@ -1,0 +1,335 @@
+/* =================== Base Styles =================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: #e9ecef;
+  color: #212529;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* =================== Utility Classes =================== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* =================== Login Page Styles =================== */
+.login-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left side with image / illustration */
+.left-panel {
+  flex: 1;
+  background: linear-gradient(180deg, #168087, #168087e0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #fff;
+}
+
+.left-panel img {
+  max-width: 80%;
+  height: auto;
+}
+
+/* Right side with form */
+.right-panel {
+  flex: 1;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.form-box {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-box h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 45px 12px 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+}
+
+.input-group input:focus {
+  border-color: #168087;
+  outline: none;
+}
+
+.input-group .icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #6c757d;
+}
+
+.input-group .toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  background: none;
+  color: #333;
+}
+
+.forgot-password {
+  text-align: right;
+  font-size: 13px;
+  margin-bottom: 20px;
+  color: #495057;
+}
+
+.login-btn {
+  background-color: #006666;
+  color: #fff;
+  padding: 12px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #004d4d;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #168087;
+  font-weight: 500;
+}
+
+/* =================== Dashboard Layout =================== */
+.main-content {
+  margin-left: 230px;
+  padding: 20px;
+  transition: margin 0.3s;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+/* =================== Sidebar =================== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 230px;
+  background-color: #006666;
+  padding: 20px 0;
+  color: #fff;
+  transition: width 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+  overflow-x: hidden;
+}
+
+.sidebar-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  margin-bottom: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e0e0e0;
+  padding: 10px 20px;
+  display: block;
+  border-left: 4px solid transparent;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #005a5a; /* or rgba(255, 255, 255, 0.1) for softer look */
+  color: #ffffff;
+  border-left: 4px solid #ffffff;
+  border-radius: 0 20px 20px 0; /* Optional: soft rounded right side */
+}
+
+/* Collapsible Sidebar */
+.sidebar.collapsed {
+  width: 70px;
+  transform: translateX(0);
+}
+
+.sidebar.collapsed .nav-links li a span,
+.sidebar.collapsed .sidebar-logo {
+  display: none;
+}
+
+/* Sidebar Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    padding: 15px 0;
+  }
+
+  .nav-links a {
+    padding: 8px 16px;
+    font-size: 15px;
+  }
+}
+
+/* =================== Topbar =================== */
+.topbar {
+  background-color: white;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* =================== Card =================== */
+.card {
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.card-title {
+  color: #198754;
+  font-weight: bold;
+}
+
+/* =================== BPM Animation =================== */
+.bpm-animate {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+/* =================== Dark Mode =================== */
+.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode .sidebar {
+  background-color: #005a5a !important;
+}
+
+.dark-mode .topbar,
+.dark-mode .chat-header {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1 !important;
+  border-color: #343a40;
+}
+
+.dark-mode .card,
+.dark-mode .chat-input {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1 !important;
+}
+
+.dark-mode input,
+.dark-mode .form-control {
+  background-color: #2a2a2a !important;
+  color: #f1f1f1 !important;
+  border-color: #444 !important;
+}
+
+.dark-mode .btn-send,
+.dark-mode .btn-send:hover,
+.dark-mode .mic-btn,
+.dark-mode .mic-btn:hover {
+  background-color: #006666 !important;
+}
+
+/* =================== Theme Settings Submenu =================== */
+.sidebar .settings {
+  margin-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 0.5rem;
+}
+
+.nav-links .settings-submenu {
+  display: none;
+  flex-direction: column;
+  padding-left: 25px;
+}
+
+.nav-links .show-submenu .settings-submenu {
+  display: flex;
+}
+
+.theme-option {
+  cursor: pointer;
+  font-size: 0.95rem;
+  padding: 5px 0;
+  color: #fff;
+}
+
+.theme-option:hover,
+.theme-option.active {
+  background: rgba(255, 255, 255, 0.15);
+  font-weight: bold;
+  text-decoration: underline;
+}
+.btn-toggle-sidebar {
+  background-color: #ffffff;
+  color: #006666;
+}
+
